@@ -3,518 +3,426 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+
+  <meta name="title" content="Foundation Models for Embodied Navigation: A Survey">
+  <meta name="description" content="Project page for the survey on foundation models for embodied navigation, covering taxonomy, design dimensions, data and training strategies, efficient deployment, benchmarks, and future directions.">
+  <meta name="keywords" content="embodied navigation, foundation models, large language models, vision-language models, world models, robot navigation, survey">
+  <meta name="author" content="Longxi Gao, Weikai Xie, Haoze Qian, Rongjie Yi, Shihe Wang, Jiaye Song, Dongqi Cai, Jinliang Yuan, Yunhao Liu, Xuanzhe Liu, Shangguang Wang, Mengwei Xu">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:site_name" content="Embodied Navigation Survey">
+  <meta property="og:title" content="Foundation Models for Embodied Navigation: A Survey">
+  <meta property="og:description" content="A survey of how LLMs, VLMs, and world-model-style systems are reshaping embodied navigation.">
+  <meta property="og:url" content="https://github.com/UbiquitousLearning/EmbodiedNavigation-Survey">
+  <meta property="og:image" content="static/images/teaser.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:image:alt" content="Foundation Models for Embodied Navigation: A Survey">
+  <meta property="article:published_time" content="2026-03-25T00:00:00.000Z">
+  <meta property="article:author" content="Longxi Gao">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="Embodied Navigation">
+  <meta property="article:tag" content="Foundation Models">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="Foundation Models for Embodied Navigation: A Survey">
+  <meta name="twitter:description" content="Survey project page for foundation models in embodied navigation.">
+  <meta name="twitter:image" content="static/images/teaser.png">
+  <meta name="twitter:image:alt" content="Foundation Models for Embodied Navigation: A Survey">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
+  <meta name="citation_title" content="Foundation Models for Embodied Navigation: A Survey">
+  <meta name="citation_author" content="Gao, Longxi">
+  <meta name="citation_author" content="Xie, Weikai">
+  <meta name="citation_author" content="Qian, Haoze">
+  <meta name="citation_author" content="Yi, Rongjie">
+  <meta name="citation_author" content="Wang, Shihe">
+  <meta name="citation_author" content="Song, Jiaye">
+  <meta name="citation_author" content="Cai, Dongqi">
+  <meta name="citation_author" content="Yuan, Jinliang">
+  <meta name="citation_author" content="Liu, Yunhao">
+  <meta name="citation_author" content="Liu, Xuanzhe">
+  <meta name="citation_author" content="Wang, Shangguang">
+  <meta name="citation_author" content="Xu, Mengwei">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="Survey / Preprint">
+  <meta name="citation_pdf_url" content="static/pdfs/paper.pdf">
+
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>Foundation Models for Embodied Navigation: A Survey</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+  <link rel="icon" type="image/x-icon" href="static/images/robot.png">
+  <link rel="apple-touch-icon" href="static/images/robot.png">
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
+
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
+
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "Foundation Models for Embodied Navigation: A Survey",
+    "description": "A survey of foundation-model-centered embodied navigation, covering taxonomy, architectural design, data and training pipelines, efficient deployment, benchmarks, and future directions.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
+      {"@type": "Person", "name": "Longxi Gao"},
+      {"@type": "Person", "name": "Weikai Xie"},
+      {"@type": "Person", "name": "Haoze Qian"},
+      {"@type": "Person", "name": "Rongjie Yi"},
+      {"@type": "Person", "name": "Shihe Wang"},
+      {"@type": "Person", "name": "Jiaye Song"},
+      {"@type": "Person", "name": "Dongqi Cai"},
+      {"@type": "Person", "name": "Jinliang Yuan"},
+      {"@type": "Person", "name": "Yunhao Liu"},
+      {"@type": "Person", "name": "Xuanzhe Liu"},
+      {"@type": "Person", "name": "Shangguang Wang"},
+      {"@type": "Person", "name": "Mengwei Xu"}
     ],
-    "datePublished": "2024-01-01",
+    "datePublished": "2026-03-25",
     "publisher": {
       "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
+      "name": "Beijing University of Posts and Telecommunications"
     },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "url": "https://github.com/UbiquitousLearning/EmbodiedNavigation-Survey",
+    "image": "static/images/teaser.png",
+    "keywords": [
+      "Embodied Navigation",
+      "Foundation Models",
+      "Vision-Language Models",
+      "Large Language Models",
+      "World Models"
+    ],
+    "abstract": "This survey systematically reviews systems where LLMs, VLMs, and related predictive models play a central role in embodied navigation, focusing on taxonomy, design paradigms, data and training strategies, deployment constraints, evaluation, and future directions.",
     "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
       "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
+      "@id": "https://github.com/UbiquitousLearning/EmbodiedNavigation-Survey"
+    }
   }
   </script>
 </head>
 <body>
 
-
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">Foundation Models for Embodied Navigation: A Survey</h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Longxi Gao<sup>1*</sup>,</span>
+                <span class="author-block">Weikai Xie<sup>1*</sup>,</span>
+                <span class="author-block">Haoze Qian<sup>1</sup>,</span>
+                <span class="author-block">Rongjie Yi<sup>1</sup>,</span>
+                <span class="author-block">Shihe Wang<sup>1</sup>,</span>
+                <span class="author-block">Jiaye Song<sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                  <a href="https://www.caidongqi.com/" target="_blank">Dongqi Cai</a><sup>2</sup>
+                </span>    
+                <span class="author-block">
+                  <a href="https://www.yuanjinliang.com/" target="_blank">Jinliang Yuan</a><sup>3</sup>
+                </span>    
+                <span class="author-block">
+                  <a href="https://people.gix.tsinghua.edu.cn/yunhao/en.html" target="_blank">Yunhao Liu</a><sup>3</sup>
+                </span>    
+                <span class="author-block">
+                  <a href="https://cs.pku.edu.cn/info/1234/2110.htm" target="_blank">Xuanzhe Liu</a><sup>4</sup>
+                </span>    
+                <span class="author-block">
+                  <a href="https://teacher.bupt.edu.cn/wangshangguang" target="_blank">Shangguang Wang</a><sup>1</sup>
+                </span>    
+                <span class="author-block">
+                  <a href="https://xumengwei.github.io/" target="_blank">Mengwei Xu</a><sup>1†</sup>
+                </span>                
+                </span>
+              </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>Beijing University of Posts and Telecommunications</span>
+                <span class="author-block"><sup>2</sup>Nanjing University</span>
+                <span class="author-block"><sup>3</sup>Tsinghua University</span>
+                <span class="author-block"><sup>4</sup>Peking University</span>
+              </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
+              <div class="is-size-6 publication-authors">
+                <span class="author-block"><small><sup>*</sup>Equal contribution. <sup>†</sup>Corresponding author.</small></span>
+              </div>
+
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="static/pdfs/foundation-models-for-embodied-navigation-a-survey.pdf" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
                     </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/UbiquitousLearning/EmbodiedNavigation-Survey" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Paper List</span>
                   </a>
                 </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="#survey-map" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-sitemap"></i>
+                    </span>
+                    <span>Abstract</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-quote-right"></i>
+                    </span>
+                    <span>BibTeX</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="static/images/0_teaser.png" alt="Teaser figure for foundation models in embodied navigation" loading="eager"/>
+          <p class="subtitle has-text-justified is-size-6">
+            <strong>Overview:</strong> Embodied navigation systems allow robots autonomously navigate to desired physical locations by understanding task instructions and comprehending environmental information. These systems are typically supported by architectural designs that integrate perception, memory, reasoning, and control, and are deployed across diverse embodiments, scenes, and task settings, with performance evaluated along multiple dimensions.
           </p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+    </section>
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <section class="section hero is-light" id="survey-map">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                The remarkable advancements of embodied navigation, the process of physically situated agents perceiving and reasoning through egocentric observations to reach target locations, have recently been reshaped by the emergence of foundation models. Departing from traditional, task-specific policies trained from scratch on limited datasets, this new paradigm leverages the reasoning and multimodal capabilities of Large Language Models (LLMs), Vision-Language Models (VLMs), and Video Generation Models (VGMs), achieving superior generalization and flexible decision-making in unseen environments.
+              </p>
+              <p>
+                For the first time, this survey systematically reviews the landscape of foundation models for embodied navigation, focusing on systems where these models play a central role in perception, long-horizon memory management, and action generation.
+                The survey aims to categorize and interpret existing embodied navigation research through the lens of design paradigms, data sources, and training strategies.
+                Through this analysis, we offer a synthesized outlook on the evolution of navigation brains, highlight the bottlenecks of dataset bias, and contribute guidance for future research, hoping to bring the field closer to robust, general-purpose embodied intelligence.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
+    </section>
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3 has-text-centered">What This Survey Covers</h2>
+            <div class="columns is-multiline">
+              <div class="column is-full">
+                <div class="box">
+                  <h3 class="title is-5">Problem Formulation and Taxonomy</h3>
+                  <p>We formalize the embodied navigation problem and distinguish it from other embodied intelligence tasks, such as locomotion and manipulation. We then present taxonomies of navigation tasks and robotic embodiments.</p>
+                </div>
+              </div>
+              <div class="column is-full">
+                <div class="box">
+                  <h3 class="title is-5">Key Design Dimensions</h3>
+                  <p>We analyze how agents encode observations and spatial structure, how they maintain and update memory under partial observability, and how they translate accumulated information into navigation decisions and executable motion. We then extend the discussion to the system level and examine what architectural designs are used to coordinate these input, memory, and output components, including modular systems, single-policy systems, dual-system designs, and world-model-based variants.</p>
+                </div>
+              </div>
+              <div class="column is-full">
+                <div class="box">
+                  <h3 class="title is-5">Data Collection and Training Strategies</h3>
+                  <p>We summarize the major data sources that support navigation models and discuss representative learning paradigms built on them, highlighting dataset biases and leakage issues that remain key obstacles to real-world generalization.</p>
+                </div>
+              </div>
+              <div class="column is-full">
+                <div class="box">
+                  <h3 class="title is-5">Efficient Deployment</h3>
+                  <p>We review efficient deployment for embodied navigation from two perspectives: (1) real-world deployment across robotic embodiments and (2) acceleration techniques spanning model design and software-system optimization.</p>
+                </div>
+              </div>
+              <div class="column is-full">
+                <div class="box">
+                  <h3 class="title is-5">Benchmarks and Evaluation Metrics</h3>
+                  <p>We organize existing benchmarks by task type and highlights the distinct evaluation objectives associated with each category. It then summarizes the major families of evaluation metrics, including task success, trajectory quality, instruction or semantic alignment, generalization, safety, and system efficiency.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </section>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container survey-carousel-container">
+          <h2 class="title is-3 has-text-centered">Figures from the Survey</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <div class="survey-figure-frame">
+                <img src="static/images/1_timeline.png" alt="Timeline of representative embodied navigation foundation models" loading="lazy"/>
+              </div>
+              <h2 class="subtitle has-text-centered">
+                Timeline of representative systems across the recent foundation-model era.
+              </h2>
+            </div>
+            <div class="item">
+              <div class="survey-figure-frame">
+                <img src="static/images/2_2_task_taxonomy.png" alt="Task taxonomy for embodied navigation" loading="lazy"/>
+              </div>
+              <h2 class="subtitle has-text-centered">
+                Task taxonomy covering semantic, geometric, and interactive navigation.
+              </h2>
+            </div>
+            <div class="item">
+              <div class="survey-figure-frame">
+                <img src="static/images/2_3_embodiment_taxonomy.png" alt="Embodiment taxonomy for embodied navigation" loading="lazy"/>
+              </div>
+              <h2 class="subtitle has-text-centered">
+                Embodiment taxonomy across wheeled robots, legged robots, and UAVs.
+              </h2>
+            </div>
+            <div class="item">
+              <div class="survey-figure-frame">
+                <img src="static/images/3_1_key_design.png" alt="Key design dimensions for embodied navigation" loading="lazy"/>
+              </div>
+              <h2 class="subtitle has-text-centered">
+                Key design dimensions from perception and memory to action generation.
+              </h2>
+            </div>
+            <div class="item">
+              <div class="survey-figure-frame">
+                <img src="static/images/3_4_architecture.png" alt="Architecture patterns for embodied navigation systems" loading="lazy"/>
+              </div>
+              <h2 class="subtitle has-text-centered">
+                Architectural patterns including modular, single-policy, dual-system, and world-model-based systems.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- End of Statcounter Code -->
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3 has-text-centered">Future Directions</h2>
+          <div class="columns is-multiline is-centered">
+            <div class="column is-two-thirds">
+              <div class="box">
+                <h3 class="title is-5">Establishing the scaling law for embodied navigation.</h3>
+                <p>While scaling has proven transformative for language and beyond, the path to a similar scaling law for navigation remains obscured by a severe data bottleneck. Existing synthetic and simulation data suffer from a persistent sim-to-real gap and the lack of data diversity, particularly in visual geometry and physical dynamics. Conversely, there is a distinct lack of large-scale, diverse, and high-quality real-world navigation data to provide the necessary supervision for multi-billion parameter models. Bridging this gap through better data engines or massive-scale robot logs is essential.</p>
+              </div>
+            </div>
+          
+            <div class="column is-two-thirds">
+              <div class="box">
+                <h3 class="title is-5">Converging VLM and VGM backbones.</h3>
+                <p>A fundamental question for future navigation foundation models is whether to adopt VLMs or VGMs as the primary backbone. Theoretically, embodied navigation requires both the strong semantic reasoning and instruction-following capabilities of VLMs, as well as the world-modeling and physical-prediction capabilities of VGMs. Moving forward, the field should explore architectures that fuse these strengths, enabling agents that can both understand complex linguistic goals and predict the physical consequences of their movements.</p>
+              </div>
+            </div>
+          
+            <div class="column is-two-thirds">
+              <div class="box">
+                <h3 class="title is-5">Developing next-generation benchmarks.</h3>
+                <p>Many existing benchmarks are increasingly outdated, failing to capture the requirements of modern navigation foundation models such as open-vocabulary reasoning and social compliance. Future benchmarks must move beyond terminal success rates to include rigorous evaluation of instruction fidelity, real-time latency, and robustness under dynamic disturbances.</p>
+              </div>
+            </div>
+          
+            <div class="column is-two-thirds">
+              <div class="box">
+                <h3 class="title is-5">Hardware-aware algorithmic optimization.</h3>
+                <p>Given the strict hardware constraints of physical robots, future work must focus on bridging the gap between heavy foundation models and edge hardware. This includes advancing asynchronous inference, algorithmic compression, and intelligent device-cloud orchestration to ensure that reasoning does not come at the cost of reactive safety.</p>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </section>
 
-  </body>
-  </html>
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title has-text-centered">Read the Full Paper</h2>
+          <div class="has-text-centered">
+            <iframe src="static/pdfs/foundation-models-for-embodied-navigation-a-survey.pdf" width="80%" height="550" title="Foundation Models for Embodied Navigation: A Survey PDF"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@misc{longxi2026fmnav,
+          title        = {Foundation Models for Embodied Navigation: A Survey},
+          author       = {Gao, Longxi and Xie, Weikai and Qian, Haoze and Yi, Rongjie and Wang, Shihe and Song, Jiaye and Cai, Dongqi and Yuan, Jinliang and Liu, Yunhao and Liu, Xuanzhe and Wang, Shangguang and Xu, Mengwei},
+          year         = {2026},
+          howpublished = {\url{https://ubiquitouslearning.github.io/}},
+          note         = {Online; accessed 2026-03-25}
+        }</code></pre>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page is adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
